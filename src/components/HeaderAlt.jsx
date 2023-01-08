@@ -98,6 +98,7 @@ export default function HeaderAlt({ siteTitle }) {
                 height={70}
                 quality={100}
                 placeholder="blurred"
+                loading="lazy"
               />
             </Link>
           </div>
@@ -176,6 +177,7 @@ export default function HeaderAlt({ siteTitle }) {
                   width={120}
                   height={120}
                   quality={100}
+                  loading="lazy"
                   placeholder="blurred"
                 />
               </Link>

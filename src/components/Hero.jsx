@@ -1,10 +1,9 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
+import { StaticImage } from "gatsby-plugin-image";
+
 
 import PrimaryButton from "./PrimaryButton";
-import HeroDesktop from "../images/banner-beachy-top-desktop.jpg";
-import HeroMobile from "../images/banner-beachy-top-mobile.jpg";
-
 
 export default function Hero() {
 
@@ -12,17 +11,14 @@ export default function Hero() {
     <div>
       <div className="z-1">
         <div className="absolute flex w-full h-screen bg-black/[.3] sm:bg-black/[.2] z-10"></div>
-        <img
-          src={HeroDesktop}
+        <StaticImage
+          src="../images/banner-beachy-top.jpg"
           alt="Beachy Top Pattern"
           width={2000}
-          className="hero-desktop h-screen"
-        />
-        <img
-          src={HeroMobile}
-          alt="Beachy Top Pattern"
-          width={600}
-          className="hero-mobile h-screen"
+          className="hero"
+          quality={100}
+          placeholder="blurred"
+          loading="lazy"
         />
       </div>
 

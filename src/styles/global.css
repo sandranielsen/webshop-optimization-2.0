@@ -229,19 +229,11 @@ input, select {
 
 /* Hero - banner section */
 
-.hero-desktop {
-  display: none !important; 
-  width: 100% !important;
-  object-fit: cover !important;
-  margin: 0 !important;
-}
-
-.hero-mobile {
-  display: block !important;
-  width: 100% !important;
-  object-fit: cover !important;
-  margin: 0 !important;
-
+.hero {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
 }
 
 /* Button styling */
@@ -322,14 +314,6 @@ input, select {
 
   .navbar-alt {
     padding: 1rem 4rem;
-  }
-
-  .hero-desktop {
-    display: block !important;
-  }
-
-  .hero-mobile {
-    display: none !important;
   }
 
 }

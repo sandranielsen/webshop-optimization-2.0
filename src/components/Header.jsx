@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -12,8 +13,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-import Logo from "../images/logo-white.png";
-import LogoColor from "../images/logo-color.png";
+// import Logo from "../images/logo-white.png";
+// import LogoColor from "../images/logo-color.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -39,7 +40,7 @@ export default function Header({ siteTitle }) {
     /* Source: https://tailwindui.com/components/marketing/elements/headers */
     <Popover className={navbar ? "navbar active" : "navbar"}>
       <div>
-        <div className="grid grid-cols-3 w-full justify-between items-center">
+        <div className="grid grid-cols-3 w-full h-16 justify-between items-center">
           {/* Burger menu */}
           <div className="md:hidden">
             <Popover.Button className="inline-flex items-center justify-center">
@@ -105,26 +106,28 @@ export default function Header({ siteTitle }) {
           </Popover.Group>
 
           {/* Logo */}
-          <div className="flex justify-center">
+          <div className="flex relative">
             <Link to="/">
-              <img
-                src={Logo}
+              <StaticImage
+                src="../images/logo-white.png"
                 alt={siteTitle}
-                className="header-logo"
+                className="absolute top-[-32px] right-1/2 translate-x-1/2	"
                 id="logo-primary"
                 width={70}
                 height={70}
+                placeholder="blurred"
                 loading="lazy"
               />
             </Link>
             <Link to="/">
-              <img
-                src={LogoColor}
+              <StaticImage
+                src="../images/logo-color.png"
                 alt={siteTitle}
-                className="header-logo"
+                className="absolute top-[-32px] right-1/2 translate-x-1/2	"
                 id="logo-secondary"
                 width={70}
                 height={70}
+                placeholder="blurred"
                 loading="lazy"
               />
             </Link>
@@ -206,13 +209,13 @@ export default function Header({ siteTitle }) {
             </div>
             <div className="flex justify-center my-56 h-full w-screen">
               <Link to="/">
-                <img
-                  src={Logo}
+                <StaticImage
+                  src="../images/logo-white.png"
                   alt={siteTitle}
-                  className="header-logo"
                   id="logo-primary"
                   width={120}
                   height={120}
+                  placeholder="blurred"
                   loading="lazy"
                 />
               </Link>
