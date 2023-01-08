@@ -111,7 +111,7 @@ export default function Header({ siteTitle }) {
               <StaticImage
                 src="../images/logo-white.png"
                 alt={siteTitle}
-                className="absolute top-[-32px] right-1/2 translate-x-1/2	"
+                className="absolute right-1/2 translate-x-1/2	"
                 id="logo-primary"
                 width={70}
                 height={70}
@@ -123,7 +123,7 @@ export default function Header({ siteTitle }) {
               <StaticImage
                 src="../images/logo-color.png"
                 alt={siteTitle}
-                className="absolute top-[-32px] right-1/2 translate-x-1/2	"
+                className="absolute right-1/2 translate-x-1/2"
                 id="logo-secondary"
                 width={70}
                 height={70}
