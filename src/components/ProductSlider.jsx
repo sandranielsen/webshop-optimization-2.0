@@ -35,6 +35,7 @@ const ProductCard = ({ product }) => {
             height={150}
             alt={product.title}
             loading="lazy"
+            placeholder="blurred"
           />
 
           <div className="absolute flex justify-between flex-row py-4 px-0 w-64 sm:w-80 text-[#111111]">

@@ -21,7 +21,7 @@ export default function HeaderAlt({ siteTitle }) {
   return (
     <Popover className="navbar-alt">
       <div>
-        <div className="grid grid-cols-3 w-full justify-between items-center">
+        <div className="grid grid-cols-3 w-full h-16 justify-between items-center">
           {/* Burger menu */}
           <div className="md:hidden">
             <Popover.Button className="inline-flex items-center justify-center">
