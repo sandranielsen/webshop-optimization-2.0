@@ -227,6 +227,15 @@ input, select {
   margin: auto;
 }
 
+/* Logo */
+
+.header-logo {
+  position: absolute !important;
+  top: -32px !important;
+  right: 50% !important;
+  transform: translateX(50%) !important;
+}
+
 /* Hero - banner section */
 
 .hero {
