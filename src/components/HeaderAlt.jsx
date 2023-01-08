@@ -92,7 +92,6 @@ export default function HeaderAlt({ siteTitle }) {
               <StaticImage
                 src="../images/logo-color.png"
                 alt={siteTitle}
-                className="header-logo"
                 id="logo-secondary"
                 width={70}
                 height={70}
@@ -172,7 +171,6 @@ export default function HeaderAlt({ siteTitle }) {
                 <StaticImage
                   src="../images/logo-white.png"
                   alt={siteTitle}
-                  className="header-logo"
                   id="logo-primary"
                   width={120}
                   height={120}
