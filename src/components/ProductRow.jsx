@@ -28,6 +28,7 @@ const ProductRow = ({ item }) => {
           <button
             className="text-sm cursor-pointer flex my-auto"
             onClick={() => removeLineItem(product.variants[0]?.shopifyId)}
+            aria-label="Remove Product"
           >
             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
           </button>

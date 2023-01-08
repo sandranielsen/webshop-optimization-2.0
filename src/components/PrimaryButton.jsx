@@ -6,6 +6,7 @@ const PrimaryButton = ({ text, onClick, disabled = false }) => {
       className="bg-transparent text-white border border-white rounded-full h-10 w-fit flex justify-center items-center px-10 sm:px-16 cursor-pointer hover:ease-in-out hover:duration-300 hover:bg-white hover:text-[#111111]"
       onClick={onClick}
       disabled={disabled}
+      aria-label="Link"
     >
       <p className="font-light text-xs m-0">{text}</p>
     </button>

@@ -142,7 +142,7 @@ export default function Header({ siteTitle }) {
               aria-label="Search"
               className="bg-transparent placeholder-current hidden md:block"
             />
-            <button type="button">
+            <button type="button" aria-label="Search">
               <Link to="/search-results">
                 <MagnifyingGlassIcon id="nav-item" className="h-5 w-5" />
               </Link>
