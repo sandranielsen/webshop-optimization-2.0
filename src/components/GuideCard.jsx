@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from "gatsby";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const GuideCard = ({ guide }) => {
     
     return (
-      <div className="flex flex-row h-full justify-between text-center sm:text-start">
-   
+      <div className="flex flex-row h-full justify-between text-center sm:text-start relative">
+
 
         <div className=" hidden sm:block sm:w-1/2 ">
           <img

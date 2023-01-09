@@ -18,11 +18,44 @@ const IndexPage = ({ data }) => {
 
   var settings = {
     dots: true,
+    arrows: true,
     infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+   var settingsAlt = {
+     dots: true,
+     arrows: true,
+     infinite: false,
+     speed: 500,
+     slidesToShow: 3.25,
+     slidesToScroll: 1,
+     responsive: [
+       {
+         breakpoint: 1200,
+         settings: {
+           slidesToShow: 2.25,
+           slidesToScroll: 1,
+         },
+       },
+       {
+         breakpoint: 900,
+         settings: {
+           slidesToShow: 1.25,
+           slidesToScroll: 1,
+         },
+       },
+       {
+         breakpoint: 500,
+         settings: {
+           slidesToShow: 1.25,
+           slidesToScroll: 1,
+         },
+       },
+     ],
+   };
 
 
   return (
@@ -31,16 +64,18 @@ const IndexPage = ({ data }) => {
       <Hero />
       <div id="side-padding" className="mt-12 mb-6 sm:mt-24 sm:mb-24">
         <h2 className="flex text-4xl justify-center mb-16">Patterns</h2>
-        <div className="flex flex-row gap-6 overflow-x-scroll overflow-y-hidden snap-mandatory snap-x">
-          {nodes?.map((product, index) => (
-            <ProductSlider key={index} product={product} />
-          ))}
+        <div className="slider">
+          <Slider{...settingsAlt}>
+            {nodes?.map((product, index) => (
+              <ProductSlider key={index} product={product} />
+            ))}
+          </Slider>
         </div>
       </div>
       <div>
         <Slider {...settings}>
           {guides.map((guide, index) => (
-              <GuideCard key={index} guide={guide} />
+            <GuideCard key={index} guide={guide} />
           ))}
         </Slider>
       </div>

@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
   const image = getImage(product.featuredImage.gatsbyImageData);
 
     return (
-      <div className="grid justify-center items-center w-full h-fit sm:w-80 top-0 gap-4 cursor-pointer relative mb-8">
+      <div className="grid justify-center items-center w-fit h-fit top-0 gap-4 cursor-pointer relative mb-8">
         <button
           onClick={() => addVariantToCart(product, 1)}
           aria-label="Add Product"

@@ -262,6 +262,30 @@ input, select {
 
 /* Guide preview section */
 
+.slick-dots {
+  bottom: 20px !important;
+}
+
+.slider .slick-dots {
+   display: none !important;
+}
+
+.slider .slick-prev {
+  top: 38% !important;
+}
+
+.slider .slick-next {
+  top: 38% !important;
+}
+
+.slick-prev {
+  left: 1% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 1% !important;
+  z-index: 1;
+}
  /* .slider {
   width: 100%;  
   overflow: hidden;
@@ -326,6 +350,7 @@ input, select {
 /*** Desktop styling ***/
 
 @media only screen and (min-width: 768px) {
+  
   #side-padding  {
   padding: 0 4rem;
   }
@@ -350,6 +375,15 @@ input, select {
   .navbar-alt {
     padding: 1rem 4rem;
   }
+
+  
+.slider .slick-dots {
+  display: block !important;
+  bottom: -20px !important;
+}
+
+
+
 
 }
 
