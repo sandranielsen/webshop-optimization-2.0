@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import useStore from "../context/StoreContext";
 
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -21,6 +22,10 @@ function classNames(...classes) {
 }
 
 export default function Header({ siteTitle }) {
+
+  const { cart } = useStore();
+  
+  console.log(cart.length);
 
   /* transparent header functionality - source: https://dev.to/cesareuseche/react-navbar-change-background-color-on-scroll-react-js-gatsby-2a39 */
   const [navbar, setNavbar] = useState(false);

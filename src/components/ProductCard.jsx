@@ -10,7 +10,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ProductCard = ({ product }) => {
   const { addVariantToCart } = useStore();
-  console.log(product);
   const image = getImage(product.featuredImage.gatsbyImageData);
 
 

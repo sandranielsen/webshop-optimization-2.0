@@ -12,8 +12,17 @@ html {
 
 /* Slider styling */
 body *::-webkit-scrollbar {
-  overflow: hidden; 
-} 
+    width: 100%;
+    height: 3px;
+}
+
+body *::-webkit-scrollbar-track {
+    background: #ECE9E9;
+}
+
+body *::-webkit-scrollbar-thumb {
+    background-color: #FF5802;
+}
 
 body {
     margin: 0;
@@ -278,6 +287,22 @@ input, select {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#slide-right {
+  cursor: pointer;
+}
+
+#slide-left {
+  cursor: pointer;
+}
+
+#slide-right:hover {
+  transform: scale(1.07);
+}
+
+#slide-left:hover {
+  transform: scale(1.07);
 }
 
 /* Page banner styling */

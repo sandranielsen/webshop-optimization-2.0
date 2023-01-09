@@ -1,10 +1,25 @@
 import React from 'react'
 import { Link } from "gatsby";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
-const GuideCard = ({guide}) => {
+const GuideCard = ({ guide }) => {
     
     return (
       <div className="flex flex-row h-full justify-between text-center sm:text-start relative">
+        <div>
+          <ChevronLeftIcon
+            id="slide-left"
+            className="w-8 h-8 absolute text-white left-0 z-20"
+          />
+        </div>
+        <div>
+          <ChevronRightIcon
+            id="slide-right"
+            className="w-8 h-8 absolute text-white right-0 z-20"
+          />
+        </div>
+
         <div className=" hidden sm:block sm:w-1/2 ">
           <img
             src={guide.node.imgUrl}

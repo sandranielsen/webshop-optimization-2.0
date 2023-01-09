@@ -32,11 +32,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
-    "gatsby-transformer-remark",
+    
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+
+    "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     "gatsby-plugin-netlify",

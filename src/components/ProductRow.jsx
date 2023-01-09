@@ -1,7 +1,6 @@
 import React from "react";
 
 import useStore from "../context/StoreContext";
-import SecondaryButton from "./SecondaryButton";
 import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -10,18 +9,10 @@ import {
 const ProductRow = ({ item }) => {
   const { removeLineItem } = useStore();
   const { quantity, product } = item;
-  const { cart, checkout } = useStore();
 
 
   return (
     <>
-      <div className="flex flex-row justify-between w-full gap-8 border-b border-[#aaaaaa] pb-6 mb-12">
-        <p className="font-light text-sm w-2/3 sm:w-1/2">Product</p>
-        <p className="font-light text-sm w-1/6 sm:w-1/4 text-center">
-          Quantity
-        </p>
-        <p className="font-light text-sm w-1/6 sm:w-1/4 text-right">Total</p>
-      </div>
 
       <div className="flex flex-row gap-8 items-start mb-6">
         <div className="flex flex-row gap-4 sm:gap-8 items-start w-2/3 sm:w-1/2">
@@ -55,13 +46,6 @@ const ProductRow = ({ item }) => {
         </h6>
       </div>
 
-      <div className="flex justify-center sm:justify-end border-t border-[#aaaaaa] pt-12 mt-12">
-        <SecondaryButton
-          text="Checkout"
-          onClick={() => window.open(checkout.webUrl)}
-          disabled={cart.length === 0}
-        />
-      </div>
     </>
   );
 };

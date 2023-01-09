@@ -8,12 +8,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 
 const ProductCard = ({ product }) => {
+  
   const { addVariantToCart } = useStore();
-    console.log(product);
-    const image = getImage(product.featuredImage.gatsbyImageData);
+
+  const image = getImage(product.featuredImage.gatsbyImageData);
 
     return (
-      <div className="grid justify-center items-center w-full sm:w-80 top-0 gap-4 cursor-pointer relative">
+      <div className="grid justify-center items-center w-full h-fit sm:w-80 top-0 gap-4 cursor-pointer relative mb-8">
         <button
           onClick={() => addVariantToCart(product, 1)}
           aria-label="Add Product"
@@ -32,7 +33,7 @@ const ProductCard = ({ product }) => {
           <GatsbyImage
             image={image}
             layout="constrained"
-            className="w-80 top-0 object-cover m-0 z-8"
+            className="w-64 sm:w-80 top-0 object-cover m-0 z-8"
             width={150}
             height={150}
             alt={product.title}
